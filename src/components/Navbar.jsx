@@ -1,4 +1,3 @@
-
 import { NavLink } from "react-router-dom";
 import Button from "./Button";
 
@@ -33,7 +32,7 @@ function Navbar({ favoritesCount, darkMode, onToggleDarkMode }) {
           </span>
 
           <Button
-            label={darkMode ? "Light Mode" : "Dark Mode"}
+            label={darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
             variant="primary"
             onClick={onToggleDarkMode}
           />

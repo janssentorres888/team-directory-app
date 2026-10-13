@@ -1,16 +1,41 @@
-# React + Vite
+# Team Directory App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application for browsing team members, searching users, viewing profiles, and managing favorite members.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Home, Users, User Details, About, and 404 pages
+- React Router navigation without full page reloads
+- Reusable Navbar, Button, UserCard, Loader, and ErrorMessage components
+- Search team members by name
+- Add and remove favorite members
+- Dark/Light Mode toggle
+- Loading indicator when users are loaded
+- Dynamic browser page titles
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- Tailwind CSS
+- React Router
+- JavaScript
 
-## Expanding the ESLint configuration
+## Components and Hooks
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Reusable Component — UserCard**
+
+The UserCard component displays a team member's name, email, and company. It uses props to receive user information and favorite status, and provides buttons to manage favorites and view user details.
+
+**useEffect Hook — Users Page**
+
+The `useEffect` hook loads the local users data after a one-second delay when the Users page first renders. It displays a loading indicator while waiting. Another `useEffect` updates the browser tab title based on the number of users matching the search.
+
+## How to Run
+
+1. Install Node.js.
+2. Clone or download this repository.
+3. Open the project folder in a terminal.
+4. Run `npm install`.
+5. Run `npm run dev`.
+6. Open the local URL displayed in the terminal.
